@@ -49,12 +49,12 @@ ConfigPage {
 			text: i18n("Calendars")
 		}
 		Button {
-			iconName: "resource-calendar-insert"
+			icon.name: "resource-calendar-insert"
 			text: i18n("Add Calendar")
 			onClicked: calendarsModel.addCalendar()
 		}
 		Button {
-			iconName: "resource-calendar-insert"
+			icon.name: "resource-calendar-insert"
 			text: i18n("New Calendar")
 			onClicked: calendarsModel.addNewCalendar()
 		}
@@ -94,7 +94,7 @@ ConfigPage {
 							placeholderText: i18n("Calendar Label")
 						}
 						Button {
-							iconName: "trash-empty"
+							icon.name: "trash-empty"
 							onClicked: calendarsModel.removeIndex(index)
 						}
 					}
@@ -107,7 +107,7 @@ ConfigPage {
 						}
 
 						Button {
-							iconName: "folder-open"
+							icon.name: "folder-open"
 							text: i18n("Browse")
 							onClicked: {
 								filePicker.open()

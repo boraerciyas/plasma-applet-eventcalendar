@@ -53,9 +53,9 @@ Item {
 		id: agendaScrollView
 		anchors.fill: parent
 		// clip: true
-		readonly property int viewportWidth: viewport ? viewport.width : width
-		readonly property int viewportHeight: viewport ? viewport.height : height
-		readonly property int scrollY: flickableItem ? flickableItem.contentY : 0
+		readonly property int viewportWidth: agendaScrollView.viewport ? agendaScrollView.viewport.width : width
+		readonly property int viewportHeight: agendaScrollView.viewport ? agendaScrollView.viewport.height : height
+		readonly property int scrollY: agendaScrollView.flickableItem ? agendaScrollView.flickableItem.contentY : 0
 
 		// onScrollYChanged: console.log('scrollY', scrollY)
 
@@ -139,7 +139,7 @@ Item {
 		}
 
 		function scrollToY(offsetY) {
-			flickableItem.contentY = Math.min(offsetY, contentHeight-viewportHeight)
+			agendaScrollView.flickableItem.contentY = Math.min(offsetY, contentHeight-viewportHeight)
 		}
 
 		function positionViewAtBeginning() {

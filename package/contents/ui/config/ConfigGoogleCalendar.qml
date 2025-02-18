@@ -195,7 +195,7 @@ ConfigPage {
 		}
 
 		Button {
-			iconName: "view-refresh"
+			icon.name: "view-refresh"
 			text: i18n("Refresh")
 			onClicked: googleLoginManager.updateCalendarList()
 		}
@@ -278,7 +278,7 @@ ConfigPage {
 		}
 
 		Button {
-			iconName: "view-refresh"
+			icon.name: "view-refresh"
 			text: i18n("Refresh")
 			onClicked: googleLoginManager.updateTasklistList()
 		}

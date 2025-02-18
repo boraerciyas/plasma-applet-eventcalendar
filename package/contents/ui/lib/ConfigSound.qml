@@ -26,7 +26,7 @@ RowLayout {
 		id: sfxEnabledCheckBox
 	}
 	Button {
-		iconName: "media-playback-start-symbolic"
+		icon.name: "media-playback-start-symbolic"
 		enabled: sfxEnabled && !!sfxTest
 		onClicked: {
 			sfxTest.source = sfxPath.value
@@ -39,7 +39,7 @@ RowLayout {
 		Layout.fillWidth: true
 	}
 	Button {
-		iconName: "folder-symbolic"
+		icon.name: "folder-symbolic"
 		enabled: sfxEnabled
 		onClicked: sfxPathDialog.visible = true
 

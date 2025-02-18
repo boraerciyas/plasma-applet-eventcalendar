@@ -1,10 +1,12 @@
 // Version 6
 
 import QtQuick 2.0
-import QtQuick.Controls 1.2
+import QtQuick.Controls
+import org.kde.kirigami as Kirigami
 import QtQuick.Layouts 1.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components as PlasmaComponents
 
 // Origionally from digitalclock's configTimeZones.qml
 // Recoloured with Bootstrap color scheme
@@ -17,7 +19,7 @@ Rectangle {
 	property alias wrapMode: label.wrapMode
 	property alias closeButtonVisible: closeButton.visible
 	property alias animate: visibleAnimation.enabled
-	property int iconSize: units.iconSizes.large
+	property int iconSize: Kirigami.Units.iconSizes.large
 
 	enum MessageType {
 		Positive,
@@ -160,10 +162,10 @@ Rectangle {
 	RowLayout {
 		id: layout
 		anchors.fill: parent
-		anchors.margins: units.smallSpacing
-		spacing: units.smallSpacing
+		anchors.margins: Kirigami.Units.smallSpacing
+		spacing: Kirigami.Units.smallSpacing
 
-		PlasmaCore.IconItem {
+		Kirigami.Icon {
 			id: iconItem
 			Layout.alignment: Qt.AlignVCenter
 			implicitHeight: messageWidget.iconSize
@@ -180,10 +182,10 @@ Rectangle {
 			color: messageWidget.labelColor
 		}
 
-		ToolButton {
+		PlasmaComponents.ToolButton {
 			id: closeButton
 			Layout.alignment: Qt.AlignVCenter
-			iconName: "dialog-close"
+			icon.name: "dialog-close"
 
 			onClicked: {
 				messageWidget.close()
