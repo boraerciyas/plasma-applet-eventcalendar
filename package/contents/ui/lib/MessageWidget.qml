@@ -3,7 +3,7 @@
 import QtQuick 2.0
 import QtQuick.Controls
 import org.kde.kirigami as Kirigami
-import QtQuick.Layouts 1.0
+import QtQuick.Layouts
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components as PlasmaComponents

@@ -1,6 +1,6 @@
 import QtQuick 2.0
-import QtQuick.Controls 1.0
-import QtQuick.Layouts 1.0
+import QtQuick.Controls
+import QtQuick.Layouts
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 import ".."

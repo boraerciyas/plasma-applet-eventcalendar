@@ -139,7 +139,7 @@ Item {
 		}
 
 		function scrollToY(offsetY) {
-			agendaScrollView.flickableItem.contentY = Math.min(offsetY, contentHeight-viewportHeight)
+			agendaScrollView.y = Math.min(offsetY, agendaScrollView.contentHeight-viewportHeight)
 		}
 
 		function positionViewAtBeginning() {

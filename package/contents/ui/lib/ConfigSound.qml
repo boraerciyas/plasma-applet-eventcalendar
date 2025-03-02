@@ -1,9 +1,9 @@
 // Version 5
 
 import QtQuick 2.0
-import QtQuick.Controls 1.0
-import QtQuick.Dialogs 1.0
-import QtQuick.Layouts 1.0
+import QtQuick.Controls
+import QtQuick.Dialogs
+import QtQuick.Layouts
 
 RowLayout {
 	id: configSound
@@ -46,7 +46,7 @@ RowLayout {
 		FileDialog {
 			id: sfxPathDialog
 			title: i18n("Choose a sound effect")
-			folder: '/usr/share/sounds'
+			currentFolder: '/usr/share/sounds'
 			nameFilters: [
 				i18n("Sound files (%1)", "*.wav *.mp3 *.oga *.ogg"),
 				i18n("All files (%1)", "*"),

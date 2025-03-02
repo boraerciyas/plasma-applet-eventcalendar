@@ -1,8 +1,8 @@
-import QtQuick 2.0
-import QtQuick.Controls 1.0
-import QtQuick.Controls.Styles 1.0
-import QtQuick.Dialogs 1.0
-import QtQuick.Layouts 1.0
+import QtQuick
+import QtQuick.Controls
+// import QtQuick.Controls.Styles
+import QtQuick.Dialogs
+import QtQuick.Layouts
 import org.kde.kirigami 2.0 as Kirigami
 
 import ".."
@@ -275,12 +275,12 @@ ConfigPage {
 			level: 3
 		}
 		ConfigSection {
-			ExclusiveGroup { id: clockMousewheelGroup }
+			ButtonGroup { id: clockMousewheelGroup }
 
 			RadioButton {
 				id: clockMousewheelGroupRunCommands
 				text: i18n("Run Commands")
-				exclusiveGroup: clockMousewheelGroup
+				ButtonGroup.group: clockMousewheelGroup
 				checked: plasmoid.configuration.clockMouseWheel == 'RunCommands'
 				onClicked: plasmoid.configuration.clockMouseWheel = 'RunCommands'
 			}
@@ -308,7 +308,7 @@ ConfigPage {
 			}
 
 			RadioButton {
-				exclusiveGroup: clockMousewheelGroup
+				ButtonGroup.group: clockMousewheelGroup
 				checked: false
 				text: i18n("Volume (No UI) (amixer)")
 				property string upCommand:   'amixer -q sset Master 10%+'
@@ -317,7 +317,7 @@ ConfigPage {
 			}
 			
 			RadioButton {
-				exclusiveGroup: clockMousewheelGroup
+				ButtonGroup.group: clockMousewheelGroup
 				checked: false
 				text: i18n("Volume (UI) (qdbus)")
 				property string upCommand:   'qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "increase_volume"'
